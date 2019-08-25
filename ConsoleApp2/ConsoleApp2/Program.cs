@@ -22,10 +22,35 @@ namespace ConsoleApp2
             IStringSplitter stringSplitter = serviceProvider.GetService<IStringSplitter>();
             ISwapper swapper = serviceProvider.GetService<ISwapper>();
             ISorter sorter = serviceProvider.GetService<ISorter>();
+            Entities.Settings settings = new Entities.Settings();
+            string inputFile = null;
+            Console.WriteLine(@"
+                   _   _                      ____             _              _   _  ____ 
+                  | \ | | __ _ _ __ ___   ___/ ___|  ___  _ __| |_ ___ _ __  | \ | |/ ___|
+                  |  \| |/ _` | '_ ` _ \ / _ \___ \ / _ \| '__| __/ _ \ '__| |  \| | |  _ 
+                  | |\  | (_| | | | | | |  __/___) | (_) | |  | ||  __/ |    | |\  | |_| |
+                  |_| \_|\__,_|_| |_| |_|\___|____/ \___/|_|   \__\___|_|    |_| \_|\____| v 2.0
+                                                                             
+            ");
+            while (fileLoader.ReadFromFile(inputFile) == null)
+            {
+                Console.Write("Input File Name: ");
+                inputFile = Console.ReadLine();
+            }
+            string input = fileLoader.ReadFromFile(inputFile);
 
-            Console.WriteLine("Welcome to NameSorter!");
-            Console.WriteLine("Input File:");
-            string input = fileLoader.ReadFromFile("unsorted name.txt");
+            while (settings.sortByValid() == false)
+            {
+                Console.Write("Sort By? [F]irst Name / [L]ast Name : ");
+                settings.sortBy = Console.ReadLine();
+            }
+
+            while (settings.sortModeValid() == false)
+            {
+                Console.Write("Sort Mode? [A]scending / [D]escending : ");
+                settings.sortMode = Console.ReadLine();
+            }
+
             var result = stringSplitter.split(input);
             foreach (string name in result)
             {
@@ -45,7 +70,7 @@ namespace ConsoleApp2
 
             Console.WriteLine("");
             Console.WriteLine("Sorted:");
-            List<String> sorted = sorter.sort(swapped);
+            List<String> sorted = sorter.sortAscending(swapped);
             foreach (string name in sorted)
             {
                 Console.WriteLine(name);

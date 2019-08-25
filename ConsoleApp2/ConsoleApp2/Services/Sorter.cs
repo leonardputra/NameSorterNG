@@ -7,9 +7,16 @@ namespace ConsoleApp2.Services
 {
     public class Sorter:ISorter
     {
-        public List<string> sort(List<string> input)
+        public List<string> sortAscending(List<string> input)
         {
             input.Sort();
+            return input;
+        }
+
+        public List<string> sortDescending(List<string> input)
+        {
+            input.Sort();
+            input.Reverse();
             return input;
         }
     }

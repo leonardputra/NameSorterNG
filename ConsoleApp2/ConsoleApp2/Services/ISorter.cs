@@ -6,6 +6,7 @@ namespace ConsoleApp2.Services
 {
     public interface ISorter
     {
-        List<string> sort(List<string> input);
+        List<string> sortAscending(List<string> input);
+        List<string> sortDescending(List<string> input);
     }
 }
