@@ -8,7 +8,11 @@ namespace ConsoleApp2.Services
     {
         public string[] split(string input)
         {
-            return input.Split(new[] { "\r\n", "\r", "\n" }, StringSplitOptions.None);
+            if (input != null)
+            {
+                return input.Split(new[] { "\r\n", "\r", "\n" }, StringSplitOptions.None);
+            }
+            return null;
         }
     }
 }
