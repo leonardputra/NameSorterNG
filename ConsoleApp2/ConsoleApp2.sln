@@ -3,9 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.28803.202
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleApp2", "ConsoleApp2\ConsoleApp2.csproj", "{59608757-6716-434B-B98C-FA711653348B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NameSorter", "ConsoleApp2\NameSorter.csproj", "{59608757-6716-434B-B98C-FA711653348B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XUnitTestProject1", "XUnitTestProject1\XUnitTestProject1.csproj", "{0DCD26CD-C99B-4043-A87D-BF1467760315}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "XUnitTestProject1", "XUnitTestProject1\XUnitTestProject1.csproj", "{0DCD26CD-C99B-4043-A87D-BF1467760315}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

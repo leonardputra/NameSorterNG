@@ -747,9 +747,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\leona\\Documents\\NameSorterNG\\ConsoleApp2\\ConsoleApp2\\ConsoleApp2.csproj",
-      "projectName": "ConsoleApp2",
-      "projectPath": "C:\\Users\\leona\\Documents\\NameSorterNG\\ConsoleApp2\\ConsoleApp2\\ConsoleApp2.csproj",
+      "projectUniqueName": "C:\\Users\\leona\\Documents\\NameSorterNG\\ConsoleApp2\\ConsoleApp2\\NameSorter.csproj",
+      "projectName": "NameSorter",
+      "projectPath": "C:\\Users\\leona\\Documents\\NameSorterNG\\ConsoleApp2\\ConsoleApp2\\NameSorter.csproj",
       "packagesPath": "C:\\Users\\leona\\.nuget\\packages\\",
       "outputPath": "C:\\Users\\leona\\Documents\\NameSorterNG\\ConsoleApp2\\ConsoleApp2\\obj\\",
       "projectStyle": "PackageReference",

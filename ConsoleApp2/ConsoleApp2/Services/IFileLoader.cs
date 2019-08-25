@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace ConsoleApp2.Services
+namespace NameSorter.Services
 {
     public interface IFileLoader
     {

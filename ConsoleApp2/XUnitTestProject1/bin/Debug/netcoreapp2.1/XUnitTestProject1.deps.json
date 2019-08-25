@@ -8,8 +8,8 @@
     ".NETCoreApp,Version=v2.1": {
       "XUnitTestProject1/1.0.0": {
         "dependencies": {
-          "ConsoleApp2": "1.0.0",
           "Microsoft.NET.Test.Sdk": "15.9.0",
+          "NameSorter": "1.0.0",
           "xunit": "2.4.0",
           "xunit.runner.visualstudio": "2.4.0"
         },
@@ -1073,12 +1073,12 @@
           "Microsoft.NET.Test.Sdk": "15.9.0"
         }
       },
-      "ConsoleApp2/1.0.0": {
+      "NameSorter/1.0.0": {
         "dependencies": {
           "Microsoft.Extensions.DependencyInjection": "2.2.0"
         },
         "runtime": {
-          "ConsoleApp2.dll": {}
+          "NameSorter.dll": {}
         }
       }
     }
@@ -1635,7 +1635,7 @@
       "path": "xunit.runner.visualstudio/2.4.0",
       "hashPath": "xunit.runner.visualstudio.2.4.0.nupkg.sha512"
     },
-    "ConsoleApp2/1.0.0": {
+    "NameSorter/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

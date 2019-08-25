@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace ConsoleApp2.Services
+namespace NameSorter.Services
 {
     public class Sorter:ISorter
     {

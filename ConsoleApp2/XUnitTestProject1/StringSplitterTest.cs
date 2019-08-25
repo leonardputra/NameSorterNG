@@ -1,6 +1,6 @@
 ﻿using System;
 using Xunit;
-using ConsoleApp2.Services;
+using NameSorter.Services;
 
 namespace XUnitTestProject1
 {

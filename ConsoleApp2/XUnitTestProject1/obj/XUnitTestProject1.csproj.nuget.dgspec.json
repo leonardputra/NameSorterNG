@@ -4,12 +4,12 @@
     "C:\\Users\\leona\\Documents\\NameSorterNG\\ConsoleApp2\\XUnitTestProject1\\XUnitTestProject1.csproj": {}
   },
   "projects": {
-    "C:\\Users\\leona\\Documents\\NameSorterNG\\ConsoleApp2\\ConsoleApp2\\ConsoleApp2.csproj": {
+    "C:\\Users\\leona\\Documents\\NameSorterNG\\ConsoleApp2\\ConsoleApp2\\NameSorter.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\leona\\Documents\\NameSorterNG\\ConsoleApp2\\ConsoleApp2\\ConsoleApp2.csproj",
-        "projectName": "ConsoleApp2",
-        "projectPath": "C:\\Users\\leona\\Documents\\NameSorterNG\\ConsoleApp2\\ConsoleApp2\\ConsoleApp2.csproj",
+        "projectUniqueName": "C:\\Users\\leona\\Documents\\NameSorterNG\\ConsoleApp2\\ConsoleApp2\\NameSorter.csproj",
+        "projectName": "NameSorter",
+        "projectPath": "C:\\Users\\leona\\Documents\\NameSorterNG\\ConsoleApp2\\ConsoleApp2\\NameSorter.csproj",
         "packagesPath": "C:\\Users\\leona\\.nuget\\packages\\",
         "outputPath": "C:\\Users\\leona\\Documents\\NameSorterNG\\ConsoleApp2\\ConsoleApp2\\obj\\",
         "projectStyle": "PackageReference",
@@ -89,8 +89,8 @@
         "frameworks": {
           "netcoreapp2.1": {
             "projectReferences": {
-              "C:\\Users\\leona\\Documents\\NameSorterNG\\ConsoleApp2\\ConsoleApp2\\ConsoleApp2.csproj": {
-                "projectPath": "C:\\Users\\leona\\Documents\\NameSorterNG\\ConsoleApp2\\ConsoleApp2\\ConsoleApp2.csproj"
+              "C:\\Users\\leona\\Documents\\NameSorterNG\\ConsoleApp2\\ConsoleApp2\\NameSorter.csproj": {
+                "projectPath": "C:\\Users\\leona\\Documents\\NameSorterNG\\ConsoleApp2\\ConsoleApp2\\NameSorter.csproj"
               }
             }
           }

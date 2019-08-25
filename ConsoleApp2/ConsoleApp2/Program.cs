@@ -1,10 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
-using ConsoleApp2;
-using ConsoleApp2.Services;
+using System.Linq;
+using NameSorter;
+using NameSorter.Services;
 using Microsoft.Extensions.DependencyInjection;
 
-namespace ConsoleApp2
+namespace NameSorter
 {
     class Program
     {
@@ -22,8 +23,12 @@ namespace ConsoleApp2
             IStringSplitter stringSplitter = serviceProvider.GetService<IStringSplitter>();
             ISwapper swapper = serviceProvider.GetService<ISwapper>();
             ISorter sorter = serviceProvider.GetService<ISorter>();
+
+            screenWriter screenWriter = new screenWriter();
             Entities.Settings settings = new Entities.Settings();
+            List<string> swapped = new List<string>();
             string inputFile = null;
+
             Console.WriteLine(@"
                    _   _                      ____             _              _   _  ____ 
                   | \ | | __ _ _ __ ___   ___/ ___|  ___  _ __| |_ ___ _ __  | \ | |/ ___|
@@ -39,52 +44,68 @@ namespace ConsoleApp2
             }
             string input = fileLoader.ReadFromFile(inputFile);
 
-            while (settings.sortByValid() == false)
+            while (!settings.sortByValid())
             {
                 Console.Write("Sort By? [F]irst Name / [L]ast Name : ");
                 settings.sortBy = Console.ReadLine();
             }
 
-            while (settings.sortModeValid() == false)
+            while (!settings.sortModeValid())
             {
                 Console.Write("Sort Mode? [A]scending / [D]escending : ");
                 settings.sortMode = Console.ReadLine();
             }
 
+            //split files to string array
             var result = stringSplitter.split(input);
-            foreach (string name in result)
+            Console.WriteLine("\nInput file:");
+            screenWriter.writeArray(result);
+
+            //swap the names if the sortby is LAST NAME
+            if (settings.sortBy == "L" || settings.sortBy == "l")
             {
-                Console.WriteLine(name);
+                Console.WriteLine("\nSwapped:");
+                swapped = swapper.swapList(result.ToList(), false);
+                screenWriter.writeList(swapped);
+            }
+            else {
+                swapped = result.ToList();
             }
 
-            List<string> swapped = new List<string>();
-            int index = 0;
-            Console.WriteLine("");
-            Console.WriteLine("Swapped:");
-            foreach (string name in result)
-            {
-                swapped.Add(swapper.swap(name));
-                Console.WriteLine(swapped[index]);
-                index++;
+            //sort the names Ascending or Descending
+            Console.WriteLine("\nSorted:");
+            List<String> sorted = new List<String>();
+            if (settings.sortMode == "A" || settings.sortMode == "a") {
+                sorted = sorter.sortAscending(swapped);
             }
-
-            Console.WriteLine("");
-            Console.WriteLine("Sorted:");
-            List<String> sorted = sorter.sortAscending(swapped);
-            foreach (string name in sorted)
-            {
-                Console.WriteLine(name);
+            else {
+                sorted = sorter.sortDescending(swapped);
             }
+            screenWriter.writeList(sorted);
 
-            Console.WriteLine("");
-            Console.WriteLine("Swapped Again:");
-            index = 0;
-            swapped = new List<string>();
-            foreach (string name in sorted)
+            //swap back the names if the sortby is LAST NAME
+            if (settings.sortBy == "L" || settings.sortBy == "l")
             {
-                swapped.Add(swapper.swapBack(name));
-                Console.WriteLine(swapped[index]);
-                index++;
+                Console.WriteLine("\nSwapped Again: ");
+                swapped = swapper.swapList(sorted, true);
+                screenWriter.writeList(swapped);
+            }
+        }
+    }
+
+    public class screenWriter{
+        public void writeArray(string[] input) {
+            foreach (string i in input)
+            {
+                Console.WriteLine(i);
+            }
+        }
+
+        public void writeList(List<string> input)
+        {
+            foreach (string i in input)
+            {
+                Console.WriteLine(i);
             }
         }
     }

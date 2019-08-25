@@ -3,10 +3,32 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace ConsoleApp2.Services
+namespace NameSorter.Services
 {
     public class Swapper:ISwapper
     {
+
+        public List<string> swapList(List<string> input, bool swapBackMode) {
+            List<string> result = new List<string>();
+            if (input.Count != 0)
+            {
+                if (swapBackMode == false)
+                {
+                    foreach (string i in input)
+                    {
+                        result.Add(swap(i));
+                    }
+                    return result;
+                }
+                foreach (string i in input)
+                {
+                    result.Add(swapBack(i));
+                }
+                return result;
+            }
+            return null;
+        }
+
         public string swap(string input)
         {
             string[] a = input.Split(' ');

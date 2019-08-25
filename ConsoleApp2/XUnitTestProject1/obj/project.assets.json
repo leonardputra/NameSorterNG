@@ -1695,7 +1695,7 @@
           "build/netcoreapp1.0/xunit.runner.visualstudio.props": {}
         }
       },
-      "ConsoleApp2/1.0.0": {
+      "NameSorter/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v2.1",
         "dependencies": {
@@ -1703,10 +1703,10 @@
           "Microsoft.NETCore.App": "2.1.0"
         },
         "compile": {
-          "bin/placeholder/ConsoleApp2.dll": {}
+          "bin/placeholder/NameSorter.dll": {}
         },
         "runtime": {
-          "bin/placeholder/ConsoleApp2.dll": {}
+          "bin/placeholder/NameSorter.dll": {}
         }
       }
     }
@@ -5904,17 +5904,17 @@
         "xunit.runner.visualstudio.nuspec"
       ]
     },
-    "ConsoleApp2/1.0.0": {
+    "NameSorter/1.0.0": {
       "type": "project",
-      "path": "../ConsoleApp2/ConsoleApp2.csproj",
-      "msbuildProject": "../ConsoleApp2/ConsoleApp2.csproj"
+      "path": "../ConsoleApp2/NameSorter.csproj",
+      "msbuildProject": "../ConsoleApp2/NameSorter.csproj"
     }
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v2.1": [
-      "ConsoleApp2 >= 1.0.0",
       "Microsoft.NET.Test.Sdk >= 15.9.0",
       "Microsoft.NETCore.App >= 2.1.0",
+      "NameSorter >= 1.0.0",
       "xunit >= 2.4.0",
       "xunit.runner.visualstudio >= 2.4.0"
     ]
@@ -5952,8 +5952,8 @@
       "frameworks": {
         "netcoreapp2.1": {
           "projectReferences": {
-            "C:\\Users\\leona\\Documents\\NameSorterNG\\ConsoleApp2\\ConsoleApp2\\ConsoleApp2.csproj": {
-              "projectPath": "C:\\Users\\leona\\Documents\\NameSorterNG\\ConsoleApp2\\ConsoleApp2\\ConsoleApp2.csproj"
+            "C:\\Users\\leona\\Documents\\NameSorterNG\\ConsoleApp2\\ConsoleApp2\\NameSorter.csproj": {
+              "projectPath": "C:\\Users\\leona\\Documents\\NameSorterNG\\ConsoleApp2\\ConsoleApp2\\NameSorter.csproj"
             }
           }
         }
