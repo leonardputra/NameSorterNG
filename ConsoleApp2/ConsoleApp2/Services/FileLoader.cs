@@ -13,7 +13,7 @@ namespace ConsoleApp2.Services
             {
                 return File.ReadAllText(FileName);
             }
-        return "";
+            return null;
         }
     }
 }
